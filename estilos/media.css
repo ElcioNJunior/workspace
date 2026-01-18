@@ -1,0 +1,26 @@
+article {
+  display: flex;
+  flex-direction: row; /* Coloca lado a lado */
+  justify-content: space-between; /* Texto na esquerda, GIF na direita */
+  align-items: center; /* Alinha o texto e o GIF pelo meio */
+  gap: 30px;
+  width: 100%;
+}
+
+article:has(#gif3) {
+  flex-direction: row-reverse;
+}
+
+p {
+  /* É essencial limitar a largura do texto para o GIF caber ao lado */
+  flex: 1;
+  max-width: 70%;
+  margin: 0;
+}
+
+.gifs {
+  width: 300px;
+  height: auto;
+  flex-shrink: 0; /* Impede que o navegador "esmague" o GIF */
+  margin: 20px;
+}
